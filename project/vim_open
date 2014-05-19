@@ -1,0 +1,9 @@
+:e src/main.cpp
+
+:tabnew src/options.cpp
+:60 vs include/options.h
+
+:tabnew Makefile
+:60 vs config.mk
+
+gt
