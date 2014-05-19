@@ -1,0 +1,8 @@
+bin/
+bin/release
+bin/debug
+obj/
+obj/release
+obj/debug
+result
+deps.mk
