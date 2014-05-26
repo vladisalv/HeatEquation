@@ -118,9 +118,6 @@ build:  $(OBJMODULES)
 
 # запуск
 run:
-	@echo "RUN PROGRAM"
-	@echo -n "YOUR PARAMETRS: "
-	@echo $(ARGUMENTS)
 	@./$(BIN_NOW)/$(PROG_NAME) $(ARGUMENTS)
 
 # пересобрать
