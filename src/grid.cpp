@@ -10,3 +10,11 @@ Grid::Grid(double new_left, double new_right,
 
     grid = new grid_vec (gridRow, vector<grid_t>(gridCol, 0));
 }
+
+void Grid::initGrid()
+{
+    (*grid)[0][0] = leftBoundaryFunction(0);
+    (*grid)[0][gridCol - 1] = rightBoundaryFunction(0);
+    for (int x = 0; x < gridCol - 1; x++)
+        (*grid)[0][x] = initFunction(left + x * coor_step);
+}

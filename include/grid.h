@@ -2,6 +2,7 @@
 #define __GRID_HEADER__
 
 #include "types.h"
+#include "definition_func.h"
 
 #include <vector>
 
@@ -13,8 +14,6 @@ class Grid {
     double left, right, time, time_step, coor_step;
 
     void initGrid();
-    void leftBoundaryGrid();
-    void rightBoundaryGrid();
 public:
     Grid(double left, double right, double time, double time_step, double coor_step);
     ~Grid();
