@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#include <math.h>
+
 grid_t initFunction(double x);
 grid_t leftBoundaryFunction(double t);
 grid_t rightBoundaryFunction(double t);
