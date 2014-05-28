@@ -1,9 +1,5 @@
-#include <iostream>
-
 #include "options.h"
 #include "heat.h"
-
-using namespace std;
 
 int main(int argc, char *argv[])
 {

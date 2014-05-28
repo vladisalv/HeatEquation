@@ -5,6 +5,7 @@
 #include "grid.h"
 #include "definition_func.h"
 
+#include <iostream>
 #include <fstream>
 #include <stdlib.h>
 

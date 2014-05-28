@@ -33,8 +33,8 @@
 include config.mk
 
 # инициализация опций
-ifneq ($(TYPE), "")
-ARGUMENTS += "-$(TYPE)"
+ifneq ($(S), "")
+ARGUMENTS += "-$(S)"
 endif
 ifneq ($(L), "")
 ARGUMENTS += "-l $(L)"
@@ -118,7 +118,7 @@ OUTPUT      = $(OUTPUT_DIR)/$(DATE)
 # ============== ОПРЕДЕЛЕНИЕ ЦЕЛЕЙ =============================================
 
 # абстрактные цели (выполняются в любом случае)
-.PHONY: print clean all run delete
+.PHONY: print clean all run delete watch
 
 # главная цель (пустая команда make)
 all: build
@@ -146,7 +146,7 @@ clean:
 # полная очистка. удаление исполняемых файлов и файлов результата
 delete:
 	@echo Delete output file
-	@rm -f result/*
+	@rm -f $(OUTPUT_DIR)/*
 
 # вывести опции программы
 help:
@@ -159,10 +159,9 @@ print:
 	@echo $(CFLAGS)
 	@echo $(ARGUMENTS)
 
-# посмотреть свою очередь
-# загрузить модули
-module:
-
+# отладочная печать 
+watch:
+	@gifview $(OUTPUT_DIR)/graphic.gif
 # ==============================================================================
 
 # включение файла зависимостей
