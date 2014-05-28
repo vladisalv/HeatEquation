@@ -2,8 +2,8 @@
 
 grid_t initFunction(double x)
 {
-    //return 0.0;
-    return sin(x * M_PI);
+    return x;
+    //return sin(x * M_PI);
 }
 
 grid_t leftBoundaryFunction(double t)
@@ -17,13 +17,13 @@ grid_t rightBoundaryFunction(double t)
 {
     //return t;
     //return t;
-    return 0.0;
-    //return cos(t);
+    //return 0.0;
+    return cos(t * 2 * M_PI);
 }
 
 grid_t heatFunction(double x, double t)
 {
-    //return x + t;
+    return x * cos(t * 2 * M_PI - M_PI / 2);
     //return 0.0;
-    return sin(t * 2 * M_PI);
+    //return (-(x - 0.5) * (x - 0.5) + 1) * sin(-M_PI + t * 2 * M_PI);
 }
