@@ -121,7 +121,7 @@ run:
 	@./$(BIN_NOW)/$(PROG_NAME) $(ARGUMENTS)
 
 # пересобрать
-rebuild: clean all
+rebuild: clean build
 
 # очистка от исполняемых данных
 clean:
@@ -130,7 +130,7 @@ clean:
 	@rm -f $(BIN_NOW)/$(PROG_NAME)
 	@rm -f deps.mk
 
-# полная очистка. удаление исполняемых файлов и файлов результата
+# удаление файлов результата
 delete:
 	@echo Delete output file
 	@rm -f $(OUTPUT_DIR)/*
@@ -147,7 +147,7 @@ print:
 	@echo $(ARGUMENTS)
 
 watch:
-	@gifview $(OUTPUT_DIR)/graphic.gif
+	@$(GIFPROG) $(OUTPUT_DIR)/graphic.gif
 # ==============================================================================
 
 # включение файла зависимостей

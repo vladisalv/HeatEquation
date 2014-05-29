@@ -15,3 +15,6 @@ PROG_NAME = HeatEquation
 
 # компилятор
 CC = g++
+
+# программа для просмотра gif
+GIFPROG = gifview
